@@ -1,0 +1,44 @@
+#PM0-Lexer
+This program was written as part of a two person team. 
+This a lexical analyzer for the programming language PL/0 to read in a source program written in PL/0, identify some errors, and produce, as output, the source program, the source program’s lexeme table, and a list of lexemes.
+
+-----------------------------------------------------------------
+
+Example Input:
+
+var x, y;
+begin
+y := 3;
+x := y + 56;
+end.
+
+-----------------------------------------------------------------
+
+Example Output:
+
+Source Program:
+var x, y;
+begin
+y := 3;
+x := y + 56;
+end.
+Lexeme Table: lexeme token type var 29
+x2
+,17
+y2
+; 18
+begin 21
+y2
+:= 20
+33
+; 18
+x2
+:= 20
+y2
++4
+56 3
+; 18
+end 22
+. 19
+Lexeme List:
+29  2 x  17  2 y  18  21 2 y 20 3 3 18  2 x  20  2 y  4  3  56  18  22  19
